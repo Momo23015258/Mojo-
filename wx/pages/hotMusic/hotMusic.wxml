@@ -1,0 +1,25 @@
+<!--pages/hotMusic/hotMusic.wxml-->
+<view class="toplist-focus" wx:if="{{hotMusic.length>0}}">
+  <view class="focus-bg" style="background-image: url({{hotMusic[0].pic}})"></view>
+  <view class="focus-info">
+    <view class="focus-text">
+      <scroll-view class="focus-tit" scroll-x="{{true}}" scroll-with-animation="{{true}}" style="height:30px;">
+        <text>热歌榜</text>
+      </scroll-view>
+      <text class="focus-desc">{{update_time}} 更新</text>
+    </view>
+  </view>
+</view>
+<view class="song-list {{isLight ? ' light' : ''}}" style="background:{{listBgColor}}" >
+  <view class="song-item"  wx:for="{{hotMusic}}" wx:key="index" >
+      <text class="song-number">{{index+1}}</text>
+      <view class="song-body">
+      <text class="song-tit" catchtap='handlejump' data-on="{{index}}" >{{item.name}}</text>
+      <view class="song-desc">
+        <text >{{item.singer}}</text>
+        <text> · {{item.name}}</text>
+      </view>
+      </view>
+  </view>
+</view>
+

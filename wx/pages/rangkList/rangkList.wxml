@@ -1,0 +1,13 @@
+<!--pages/rangkList/rangkList.wxml-->
+<!-- 冷门单曲酱 -->
+<view wx:for="{{coldMusic}}" wx:key="index" >
+<audio
+  poster="{{coldMusic[index].pic}}"
+  name="{{coldMusic[index].name}}"
+  author="{{coldMusic[index].singer}}"
+  src="{{coldMusic[index].url}}"
+  id="myAudio"
+  controls
+  loop
+  data-on="{{index}}" bindtap='handle1'></audio>
+</view>

@@ -1,0 +1,40 @@
+<!--index.wxml-->
+<!-- 轮播图 -->
+<view class="slider">
+    <swiper autoplay indicator-color="#fff" indicator-dots indicator-active-color="yellow">
+      <swiper-item wx:for="{{list}}" wx:key="index">
+      <image src="{{item.img_url}}" lazy-load  mode="aspectFill"></image>
+      </swiper-item>
+    </swiper>
+</view>
+<!-- 导航栏 -->
+<!-- <view>
+   <view>
+      <image src=""></image>
+   </view>
+</view> -->
+<!-- 电台 -->
+  <!-- 电台-->
+  <view class="channel">
+    <text class="title">电台</text>
+    <view class="list">
+      <view class="item" wx:for="{{list1}}" wx:key="{{index}}">
+        <view class="list-media">
+          <image class="img" src="{{item.img_url}}" bindtap='handlejump'  data-id="{{item.id}}"></image>
+        </view>
+        <text class="text">{{item.text}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- 热门歌单 -->
+  <view class="channel">
+    <text class="title">热门歌单</text>
+    <view class="list">
+      <view class="item" wx:for="{{hotlist}}" wx:key="index">
+        <view class="list-media">
+          <image class="img" src="{{item.pic}}" bindtap='handlejump2'  data-id="{{index}}"></image>
+        </view>
+        <text class="text">{{item.name}}</text>
+      </view>
+    </view>
+  </view>

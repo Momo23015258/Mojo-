@@ -1,0 +1,65 @@
+<!--pages/musicList/musicList.wxml-->
+<!-- 黑胶唱片唱针部分 -->
+  <view class='stylusBox' style='top: {{ -23 }}px'>
+    <view class='stylus_1' style='width: {{ 46 }}px; height: {{ 46 }}px'>
+      <view class='stylus_2'>
+        <view class='stylus_3'></view>
+        <view class='stylus_4' style='top: {{ 40 }}px'>
+          <view class='stylus_5'>
+            <view class='stylus_6'></view>
+            <view class='stylus_7'>
+              <view class='stylus_8'>
+                <view class='stylus_9 stylus_10'></view>
+                <view class='stylus_9 stylus_11'></view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 黑胶唱片部分 -->
+  <view class='level_1' style='width: {{ 270}}px; height: {{270}}px'>
+    <view class='level_2'>
+      <view class='level_3'>
+        <view class='level_3'>
+          <view class='level_3'>
+            <view class='level_3'>
+              <view class='level_3'>
+                <view class='level_3'>
+                  <view class='level_3'>
+                    <view class='level_3'>
+                      <view class='level_3'>
+                        <view class='level_3'>
+                          <view class='level_3'>
+                            <view class='level_3'>
+                              <view class='level_3 level_4'>
+                                <view class='level_3 level_5'>
+                                  <image src="{{musicList[num].pic}}"></image>
+                                </view>
+                              </view>
+                            </view>
+                          </view>
+                        </view>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+<view class="audio_play">
+  <audio
+  poster="{{musicList[num].pic}}"
+  name="{{musicList[num].name}}"
+  author="{{musicList[num].singer}}"
+  src="{{musicList[num].url}}"
+  id="myAudio"
+  controls
+  loop
+  data-on="{{index}}" bindtap='handle1'></audio>
+</view>  

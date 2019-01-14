@@ -1,0 +1,4 @@
+/* pages/rangkList/rangkList.wxss */
+::-webkit-search-decoration{
+  width:0;
+}
